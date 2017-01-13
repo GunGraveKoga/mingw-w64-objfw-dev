@@ -46,7 +46,7 @@ configure_objfw() {
 	 --enable-static \
 	 --enable-runtime \
 	 --enable-seluid24 \
-	 OBJC=clang
+	 OBJC=${_compiler}
 }
 
 build() {
@@ -67,10 +67,10 @@ package_objfw() {
 	make DESTDIR="${pkgdir}" install
 }
 
-package_mingw-w64-i686-objfw() {
+package_mingw-w64-i686-objfw-rel() {
 	package_objfw
 }
 
-package_mingw-w64-x86_64-objfw() {
+package_mingw-w64-x86_64-objfw-rel() {
 	package_objfw
 }
