@@ -21,6 +21,8 @@ makedepends=("autoconf"
 
 depends=("${MINGW_PACKAGE_PREFIX}-clang")
 
+conflicts=("${MINGW_PACKAGE_PREFIX}-objfw-rel")
+
 source=("https://github.com/Midar/objfw/archive/master.zip")
 
 sha256sums=('SKIP')
