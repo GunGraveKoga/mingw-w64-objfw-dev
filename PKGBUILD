@@ -7,7 +7,7 @@ pkgbase=mingw-w64-${_realname}
 pkgname=("${MINGW_PACKAGE_PREFIX}-${_realname}")
 
 pkgver=0.9.dev
-pkgrel=1
+pkgrel=2
 pkgdesc="A portable framework for the Objective-C language (mingw-w64)"
 arch=('any')
 url="https://heap.zone/objfw/"
