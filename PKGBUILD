@@ -37,7 +37,7 @@ prepare() {
 
 	cd "${srcdir}"/objfw-master
 
-	[[ -f ./configure ]] || autoreconf || true
+	[[ -f ./configure ]] || autoreconf -fi || true
 
 }
 
@@ -48,7 +48,8 @@ configure_objfw() {
 	 --enable-static \
 	 --enable-runtime \
 	 --enable-seluid24 \
-	 OBJC=${_compiler}
+	OBJC=${_compiler} \
+	OBJCFLAGS="-O0 -g3"
 }
 
 build() {
